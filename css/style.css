@@ -1,0 +1,837 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    font-family: 'Inter', sans-serif;
+ 
+}
+
+.nav{
+    height: 80px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.nav-menu{
+    background-color: var(--orange);
+    width: 35px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 5px;
+}
+:root{
+    scroll-behavior: smooth;
+  --orange: #ff7143;
+    --blue: #5454d4;
+    --background:#ededfa;
+    
+    /*ROOT SIRVE COMO UN ATAJO EL CUAL SE LE PUEDE APLICAR
+    PROPIEDADES A GUSTO PROPIO, Y SE APLICAN LOS MISMOS
+    MEDIANTE EL CODIFICADO --var()-- */
+}
+.container{
+ 
+    width: 90%;
+    max-width: 1200px;
+    margin:0 auto;
+    overflow: hidden;
+    /*El overflow en CSS es una propiedad que define cómo se debe mostrar el contenido que se desborda de los bordes de un elemento.*/
+    padding: 80px 0;
+  
+}
+.container--hero{
+    padding: 0;
+
+}
+
+.nav_list{
+   position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--blue);
+    padding: 80px 0;
+ display: grid;
+ place-content: center;
+ /*para centrar 
+ el contenido*/
+ list-style: none;
+ gap: 2.5rem;
+
+
+ transform: translate(-150%);
+
+transition: transform .25s;
+
+
+
+}
+
+
+.nav_list--show{
+    transform: translate(0);
+   
+}
+
+
+.nav-link{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+   
+}
+
+/*hero-main*/
+.hero-main{
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.hero-img{
+    width: 100%;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.hero-texts{
+    display: grid;
+    gap: 2rem;
+    /*separa a todos los elementos en 
+    particular con una clase en
+     especifico*/
+    text-align: center;
+    padding-bottom: 70px;
+}
+.hero-title{
+    font-size: 2.5em;
+}
+.hero-paragraph{
+    line-height: 1.5;
+    /*EL LINE-HEIGHT SIRVE PARA
+     ESPACIAR UNA FUENTE DE TEXTO ENTRE
+      SI MISMA PARA QUE EL MISMO NO DE
+     LA SENSACION DE QUE ESTA PEGADO*/
+    font-weight: 300;
+    margin-bottom: .5rem;
+}
+.hero-cta{
+    background-color: var(--blue);
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 3em;
+    justify-self:center;
+    /*JUSTIFY-SELF SIRVE PARA LA
+     ALINEACION DE UN ELEMENTO DE
+      MANERA AUTOMATICA Y A SU VEZ LE
+       DETERMINA UN SITIO EN 
+       ESPECIFICO*/
+    border-radius: .6em;
+}
+.hero-figure{
+    order: -1;
+    padding: 20px 0;
+}
+
+
+/*El BOX-MODEL es el método tradicional
+ que se basa en el concepto de cajas,
+ que tienen propiedades como ancho,
+ alto, margen, relleno y borde. El
+ BOX-MODEL se puede usar para crear
+   diseños simples basados en
+  columnas o filas, pero tiene
+  algunas limitaciones cuando
+ se trata de alinear o
+  distribuir los elementos de 
+ forma flexible.
+ 
+ 
+FLEXBOX es un método más moderno que
+ se basa en el concepto de contenedores
+ e ítems flexibles, que pueden cambiar
+ su tamaño y orden según el espacio
+ disponible y las reglas definidas
+ por el desarrollador. FLEXBOX
+ permite crear diseños más complejos y
+ responsivos, que se adaptan a 
+diferentes tamaños de pantalla y
+ orientaciones. FLEXBOX también ofrece
+ más opciones para alinear y
+ justificar los elementos a lo largo
+ de los ejes principal y
+ transversal.
+
+ */
+
+
+
+
+
+
+     /*about*/
+
+ .about{
+    background-color: var(--background);
+ }
+ .about_container{
+    display: flex;
+    flex-direction: column;
+     gap: 2rem;
+
+ }
+     .about_img{
+    max-width: 280px;
+    display: block;
+    aspect-ratio: 1/1;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 50%;
+ }
+
+ .about_texts{
+
+    text-align:center;
+    
+    display:grid;
+    gap: 1.5em;
+    /*en este caso el display grid sirve para poder poner un gap
+    
+    CSS grid es un sistema de diseño basado en
+ cuadrículas, que permite crear páginas web con mayor
+ facilidad y flexibilidad que con otros métodos. 
+ Con CSS grid, puedes dividir el espacio de tu
+contenedor en filas y columnas, y colocar los
+elementos secundarios en las celdas que quieras.
+También puedes ajustar el tamaño, la posición y
+ el orden de los elementos, así como alinearlos
+y superponerlos.
+    
+    */
+
+   
+ }
+
+ .subtitle{
+    text-align: center;
+    font-size: 2rem;
+ }
+ .paragraph{
+    line-height: 1.5;
+    font-weight: 300;
+ }
+ /*learn*/
+ .learn_articles{
+margin-top: 3rem;
+display: grid;
+gap: 3rem;
+ }
+
+
+ .learn_img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+ }
+
+ .learn_article{
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+ }
+ /*sponsor*/
+
+ .sponsor{
+    background-color: var(--background);
+    text-align: center;
+ }
+ .sponsor_img{
+    max-width: 280px;
+    width: 100%;
+   margin: 0 auto;
+   display: block;
+ }
+ .sponsor_texts{
+
+    display: grid;
+    margin-bottom:3rem ;
+    gap: 1.5rem;
+ }
+
+.sponsor_cta{
+
+background-color: var(--blue);
+padding: 1em 3em;
+
+margin: auto;
+justify-self: center;
+text-align: center;
+
+border-radius: .6rem;
+text-decoration: none;
+color:#fff;
+
+
+}
+
+
+
+
+
+
+
+
+ .learn{
+
+    background-color:rgb(255, 255, 255);
+   border-radius: .6em;
+  
+ }
+ .statistics_container{
+
+    background-image: linear-gradient(#19181bc0, #171719e3), url('../assets/bg.jpg') ;
+    background-size: cover;
+    padding: 0 auto;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    display: grid;
+    gap: 2.5rem;
+}
+.statistics_item{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 380px;
+
+
+}
+
+.statistics_title{
+
+font-size: 3rem;
+
+
+}
+.statistics_cta{
+
+
+background-color: #ff7143;
+text-decoration: none;
+color: #fff;
+padding: 1rem 3rem;
+justify-self: center;
+margin: auto;
+border-radius: .5rem;
+font-weight: 700;
+}
+
+.footer{
+    background-color:var(--background);
+    
+}
+
+.footer_contact{
+
+display: flex;/*para que se situen un elemento al lado del otro*/
+justify-content: center;
+gap: 1rem;
+list-style: none;
+padding: 0;
+margin-top: 3rem;
+
+
+
+}
+
+.footer_link{
+
+    background-color:var(--color) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50px ;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+.footer_item:nth-of-type(1){
+
+
+--color: #1da1f2;
+}
+.footer_item:nth-of-type(2){
+
+
+    --color: #c32aa3;
+}  
+    .footer_item:nth-of-type(3){
+
+    
+        --color: #ff0000;
+
+    }
+
+    .footer_img{
+
+        width: 2.4rem;
+    }
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    @media(min-width: 768px){
+    
+ 
+
+        
+        
+
+
+        .nav-menu{
+      display: none;
+        
+    
+    
+    }
+        :root{
+            scroll-behavior: smooth;
+          --orange: #ff7143;
+            --blue: #5454d4;
+            --background:#ededfa;
+            
+            /*ROOT SIRVE COMO UN ATAJO EL CUAL SE LE PUEDE APLICAR
+            PROPIEDADES A GUSTO PROPIO, Y SE APLICAN LOS MISMOS
+            MEDIANTE EL CODIFICADO --var()-- */
+        }
+        .container{
+         
+            width: 90%;
+            max-width: 1200px;
+            margin:0 auto;
+            overflow: hidden;
+            /*El overflow en CSS es una propiedad que define cómo se debe mostrar el contenido que se desborda de los bordes de un elemento.*/
+            padding: 80px 0;
+          
+        }
+        .container--hero{
+            padding: 0;
+        
+        }
+        
+        .nav_list{
+           position: static;
+          
+           background-color: transparent;
+            padding: 0;
+         display: flex;
+        
+         place-content: center;
+         /*para centrar 
+         el contenido*/
+         list-style: none;
+         gap: 2rem;
+        
+        
+         transform: unset;
+        
+        transition: none;
+ 
+        
+        }
+        
+        
+        .nav_list--show{
+            transform:unset/* valor original por defecto*/;
+           
+        }
+        
+        
+        .nav-link{
+           
+            color: rgb(255, 136, 0);
+           
+           
+        }
+        
+        /*hero-main*/
+        .hero-main{
+            
+            flex-direction: row;
+            gap: 40px;
+           min-height: 550px;
+            align-items: center;
+        }
+        .hero-img{
+           max-width: 450px;
+            
+        }
+        .hero-texts{
+           
+           width: 54%;
+            display: grid;
+            gap: 2rem;
+            /*separa a todos los elementos en 
+            particular con una clase en
+             especifico*/
+            text-align: start;
+            padding-bottom: 0;
+            place-content: center;
+        }
+        .hero-title{
+            font-size: 2.5em;
+        }
+        .hero-paragraph{
+            line-height: 1.5;
+            /*EL LINE-HEIGHT SIRVE PARA
+             ESPACIAR UNA FUENTE DE TEXTO ENTRE
+              SI MISMA PARA QUE EL MISMO NO DE
+             LA SENSACION DE QUE ESTA PEGADO*/
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+        .hero-cta{
+            background-color: var(--blue);
+            text-decoration: none;
+            color: #fff;
+            padding: 1em 3em;
+            justify-self:start;
+            /*JUSTIFY-SELF SIRVE PARA LA
+             ALINEACION DE UN ELEMENTO DE
+              MANERA AUTOMATICA Y A SU VEZ LE
+               DETERMINA UN SITIO EN 
+               ESPECIFICO*/
+            border-radius: .6em;
+        }
+        .hero-figure{
+            order: 0;
+            padding: 0;
+            width: 46%;
+        }
+        
+        
+        /*El BOX-MODEL es el método tradicional
+         que se basa en el concepto de cajas,
+         que tienen propiedades como ancho,
+         alto, margen, relleno y borde. El
+         BOX-MODEL se puede usar para crear
+           diseños simples basados en
+          columnas o filas, pero tiene
+          algunas limitaciones cuando
+         se trata de alinear o
+          distribuir los elementos de 
+         forma flexible.
+         
+         
+        FLEXBOX es un método más moderno que
+         se basa en el concepto de contenedores
+         e ítems flexibles, que pueden cambiar
+         su tamaño y orden según el espacio
+         disponible y las reglas definidas
+         por el desarrollador. FLEXBOX
+         permite crear diseños más complejos y
+         responsivos, que se adaptan a 
+        diferentes tamaños de pantalla y
+         orientaciones. FLEXBOX también ofrece
+         más opciones para alinear y
+         justificar los elementos a lo largo
+         de los ejes principal y
+         transversal.
+        
+         */     
+
+
+  /*about*/
+
+ 
+ 
+ .about_container{
+    display: flex;
+    flex-direction: row;
+     gap: 2rem;
+
+ }
+     .about_img{
+  width: 100%;
+ }
+
+ .about_texts{
+width: 70%;
+    text-align:start;
+    
+    display:grid;
+    gap: 1.5em;
+    place-content: center;
+    /*en este caso el display grid sirve para poder poner un gap
+    
+    CSS grid es un sistema de diseño basado en
+ cuadrículas, que permite crear páginas web con mayor
+ facilidad y flexibilidad que con otros métodos. 
+ Con CSS grid, puedes dividir el espacio de tu
+contenedor en filas y columnas, y colocar los
+elementos secundarios en las celdas que quieras.
+También puedes ajustar el tamaño, la posición y
+ el orden de los elementos, así como alinearlos
+y superponerlos.
+    
+    */
+
+   
+ }
+
+ .subtitle{
+    text-align: inherit;
+    font-size: 2rem;
+ }
+ .paragraph{
+    line-height: 1.5;
+    font-weight: 300;
+ }
+ /*learn*/
+
+ .learn_articles{
+
+    gap: 2rem;
+
+grid-auto-flow: column;
+grid-auto-columns: 1fr;
+
+}
+
+ .learn{
+
+    text-align: center;
+ }
+
+ .learn_img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+ }
+
+ .learn_article{
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+ }
+
+
+ .sponsor{
+  
+ 
+   
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    
+     
+     
+ }
+ .sponsor_img{
+    max-width: 400px;
+ 
+ }
+ 
+ 
+ .sponsor_omar{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+
+ }
+ 
+ 
+ .sponsor_figure{
+    width: 45%;
+ }
+ 
+ 
+ 
+ .sponsor_texts{
+
+   width: 55%;
+    place-content: center;
+  margin-bottom: 0;
+
+ }
+
+.sponsor_cta{
+
+justify-self: start;
+
+
+}
+
+
+
+
+
+
+
+
+ .learn{
+
+    background-color:rgb(255, 255, 255);
+   border-radius: .6em;
+  
+ }
+ .statistics_container{
+
+    background-image: linear-gradient(#19181bc0, #171719e3), url('../assets/bg.jpg') ;
+    background-size: cover;
+    padding: 0 auto;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    display: grid;
+    gap: 2.5rem;
+}
+.statistics_item{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 380px;
+
+
+}
+
+.statistics_title{
+
+font-size: 4.5rem;
+
+
+}
+.statistics_cta{
+
+
+background-color: #ff7143;
+text-decoration: none;
+color: #fff;
+padding: 1rem 3rem;
+justify-self: center;
+margin: auto;
+border-radius: .5rem;
+font-weight: 700;
+}
+
+.footer{
+ text-align: center;
+    
+}
+.subtitle{
+
+    text-align: center;
+}
+.footer_contact{
+
+display: flex;/*para que se situen un elemento al lado del otro*/
+justify-content: center;
+gap: 1rem;
+list-style: none;
+padding: 0;
+margin-top: 3rem;
+
+
+
+}
+
+.footer_link{
+
+    background-color:var(--color) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50px ;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+.footer_item:nth-of-type(1){
+
+
+--color: #1da1f2;
+}
+.footer_item:nth-of-type(2){
+
+
+    --color: #c32aa3;
+}  
+    .footer_item:nth-of-type(3){
+
+    
+        --color: #ff0000;
+
+    }
+
+    .footer_img{
+
+        width: 2.4rem;
+    }
+
+
+
+
+
+    }
+
+
+    
+    
+
+
+
+    
+
+
+
+
+    /*la seudoclase nth-of-type permite seleccionar a un elemento en especifico*/
+
+
+
+
